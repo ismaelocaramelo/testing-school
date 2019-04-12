@@ -27,9 +27,49 @@ Three thing to keep in mind:
 - [Understandable](#understanble)
 - [Run frequently](#frequently)
 
-> For each desired change, make the change easy (warning: this may be hard), then make the easy change
+> For each [desired change](#explain-desired-change), make the change easy (warning: this may be hard), then make the easy change
 
-<!-- TODO: Describe this ^  -->
+Let's break kent Beck suggestion in two steps:
+
+  1. *make the change easy*
+
+  > Refactor the code to make it look like you knew this new feature was coming from the start.
+
+  2. *then make the easy change*
+
+  > Next, add code to support the new use case.
+
+I really like this approach. You’re always refactoring [code to keep it fresh.](#legacy-dead)
+
+So how this fit with the testing world:
+
+  1. Writing tests for the existing block of code
+
+  2. Then, I refactor it to make the new change easier to introduce. The tests help make these changes faster without breaking any existing features.
+
+  3. When that’s done, I make the easy change of adding the new feature and tests to support it.
+
+*Make the change easy, then make the easy change.*
+
+There are 2 things I’d like you to point out in this workflow:
+
+  1. The best time to write tests for a feature is just before you change it.
+
+  2. Tests are not just for catching bugs.
+
+With the above approach, tests can help you create a to-do list of use cases that can be checked one by one. This workflow helps me get the benefit of tests even when I’m not able to invest a lot of time up front.
+
+
+
+
+##### Legacy dead
+
+  > And you don’t have to ask for time or permission to pay tech debt because you’re constantly reducing it while you add new features. The code never becomes “legacy”. On the surface, it might look like this will slow you down because you’re doing more work. In my experience, it’s almost always faster than making the hard change because you don’t spend any time trying to understand complex code or fixing regression bugs.
+
+##### Explain Desired Change
+
+  > When you write a block of code, you write it with the best understanding and the latest information you have at that time. Months/weeks later you have to extend your code and support another user case. So somehow you fit the logic on top of the existing code and isn't always the prettiest result. Your code become complex *because it wasn't originally written with this new feature in mind*. That's where legacy code starts.
+
 
 
 ##### Understandable
