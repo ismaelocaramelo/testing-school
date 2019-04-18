@@ -144,11 +144,3 @@ Some benefits we get from unit testing are:
 ##### Frecuently
 
 > It is not worth having a suite of 8000 tests, if you never execute it. You have to find a way to execute them with certain periodicity (ideally in each commit).
-
-TODO:
-
-https://kentcdodds.com/blog/how-to-know-what-to-test
-
-https://kentcdodds.com/blog/unit-vs-integration-vs-e2e-tests
-
-https://vimeo.com/274376070
